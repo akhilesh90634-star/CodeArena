@@ -1,10 +1,11 @@
-/* GLOBAL — prevents unwanted scroll */
+/* GLOBAL — fixed scroll lock removed */
 html, body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: Poppins, sans-serif;
 }
 
@@ -18,7 +19,7 @@ html, body {
   padding: 0 120px;
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;   /* <-- changed */
 }
 
 /* LEFT SIDE (FORM BLOCK) */
@@ -117,10 +118,82 @@ html, body {
 /* HERO IMAGE (login version) */
 .heroImg {
   width: 472px;
-  height: 595px; /* slightly smaller per screenshot */
+  height: 595px;
   position: relative;
   top: 52px;
   left: -9px;
   z-index: 2;
   object-fit: contain;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .loginWrapper {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 40px;
+    overflow-y: auto;
+  }
+
+  .leftBox {
+    width: 100%;
+    align-items: center;
+  }
+
+  .fieldWrap,
+  .loginBtn {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .rightBox {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile (≤768px) — hide images */
+@media (max-width: 768px) {
+  .rightBox,
+  .bgShape,
+  .heroImg {
+    display: none !important;
+  }
+
+  .loginWrapper {
+    padding: 20px;
+    height: auto;
+  }
+
+  .leftBox {
+    width: 100%;
+  }
+
+  .fieldWrap,
+  .loginBtn {
+    width: 100%;
+  }
+
+  .switchLink {
+    font-size: 16px;
+  }
+}
+
+/* XS (≤480px) */
+@media (max-width: 480px) {
+  .leftBox h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .loginBtn {
+    height: 48px;
+    font-size: 16px;
+  }
 }
