@@ -1,0 +1,218 @@
+.nav {
+  width: 100vw;
+  max-width: 100vw;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding-left: 96px;
+  padding-right: 96px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+
+/* LEFT */
+.left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.left > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* LOGO */
+.logoImg {
+  width: 120px;
+  height: auto;
+}
+
+/* BRAND */
+.brand {
+  font-weight: 700;
+  font-size: 30px;
+  color: #363F8F;
+  line-height: 100%;
+  margin: -25px;
+}
+
+.arena {
+  color: #E41F3A;
+}
+
+/* CENTER MENU */
+.menu {
+  position: relative;
+  display: flex;
+  justify-self: center;
+  align-items: flex-end;
+  gap: 48px;
+  height: 50px;
+}
+
+.menu span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.indicator {
+  position: absolute;
+  bottom: -4px;
+  height: 3px;
+  background: #E41F3A;
+  border-radius: 2px;
+  transition: 0.28s ease;
+}
+
+/* DESKTOP BUTTONS */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.actions button {
+  width: 106px;
+  height: 67px;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.signup {
+  background: white;
+  border: 1px solid #4A4FAE;
+  color: #4A4FAE;
+}
+
+.login {
+  background: #4A4FAE;
+  border: 1px solid #4A4FAE;
+  color: white;
+}
+
+.signup:hover,
+.login:hover {
+  background: #E41F3A;
+  color: white;
+  border-color: #E41F3A;
+}
+
+/* HAMBURGER — HIDDEN BY DEFAULT */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #363F8F;
+  border-radius: 3px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* ANIMATION HAMBURGER → X */
+.activeHamburger span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.activeHamburger span:nth-child(2) {
+  opacity: 0;
+}
+.activeHamburger span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MOBILE MENU INITIAL */
+.mobileMenu {
+  display: none;
+  width: 100%;
+}
+
+/* --- MOBILE ONLY (<768px) --- */
+@media (max-width: 768px) {
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  /* Logo + Brand + Hamburger row */
+  .left {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* <-- FIXED SPACING */
+    padding-right: 8px; /* small breathing */
+    padding-top: 4px;
+  }
+
+  /* slightly bigger gap between logo & brand */
+  .left > div {
+    gap: 6px;
+  }
+
+  /* hide desktop menu + buttons */
+  .menu,
+  .actions {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: flex !important;
+    margin-left: auto;
+  }
+
+  /* dropdown */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    padding-top: 14px;
+  }
+
+  .mobileMenu span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .mobileActions button {
+    width: 100%;
+  }
+}
+
+/* --- TABLET & DESKTOP (≥768px) --- */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none !important;
+  }
+}

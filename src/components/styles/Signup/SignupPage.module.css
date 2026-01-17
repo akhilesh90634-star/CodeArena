@@ -1,0 +1,126 @@
+/* GLOBAL — prevents unwanted scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Poppins, sans-serif;
+}
+
+/* MAIN WRAPPER — matches canvas */
+.signupWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: calc(100vh - 90px); /* subtract navbar height */
+  padding: 0 120px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* LEFT SIDE (FORM BLOCK) */
+.leftBox {
+  width: 656px; /* figma width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* TITLE */
+.leftBox h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+  text-align: center; /* matches figma */
+}
+
+/* SUBTEXT */
+.subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.8;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* MUI TEXTFIELD STACK */
+.formBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* TEXTFIELD WRAPPER (DO NOT TOUCH MUI INTERNALS) */
+.fieldWrap {
+  width: 656px;
+  height: 50px;
+}
+
+/* BUTTON */
+.signupBtn {
+  width: 656px;
+  height: 50px;
+  border-radius: 15px;
+  background: #4A4FAE;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.signupBtn:hover {
+  background: #363F8F;
+}
+
+/* LOGIN CENTER BELOW BUTTON */
+.loginLink {
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1%;
+}
+
+.loginLink span {
+  color: #E41F3A;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE (HERO + BLOB) */
+.rightBox {
+  width: 656px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* matches figma pair centering */
+  overflow: visible;   /* blob must not clip */
+}
+
+/* BLOB BACKGROUND SHAPE */
+.bgShape {
+  width: 544px;
+  height: 680px;
+  position: absolute;
+  z-index: 1;
+  object-fit: contain;
+}
+
+/* HERO IMAGE */
+.heroImg {
+     width: 472px;
+    height: 595px;
+    position: relative;
+    z-index: 2;
+    top: 52px;
+    left: -9px;
+    object-fit: contain;
+}
