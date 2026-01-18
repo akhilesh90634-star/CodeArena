@@ -38,7 +38,7 @@
 }
 
 .card {
-  width: 400px;
+  width: 430px;
   padding: 30px;
   background: white;
   border-radius: 10px;
@@ -105,7 +105,7 @@
 
 .vectorTL {
   position: absolute;
-  top: 67px;
+  top: 65px;
   left: 0;
   transform: translate(-40%, -40%);
   width: 120px;
@@ -113,8 +113,89 @@
 
 .vectorBR {
   position: absolute;
-  bottom: 107px;
+  bottom: 105px;
   right: 0;
   transform: translate(40%, 40%);
   width: 120px;
+}
+/* ====== RESPONSIVE BREAKPOINTS ====== */
+
+/* 1200px - shrink cards a bit */
+@media (max-width: 1200px) {
+  .card {
+    width: 360px;
+  }
+}
+
+/* 1024px - allow wrapping */
+@media (max-width: 1024px) {
+  .cardContainer {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .card {
+    width: 420px;
+    transform: translateY(0) !important; /* remove stagger */
+  }
+
+  .bgLayer {
+    height: auto;
+    padding-bottom: 100px;
+  }
+}
+
+/* 768px - stack vertically */
+@media (max-width: 768px) {
+  .title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-top: 30px;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* 600px */
+@media (max-width: 600px) {
+  .personImg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .stars {
+    width: 80px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .quote {
+    width: 50px;
+  }
+}
+
+/* 420px */
+@media (max-width: 420px) {
+  .title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .cardHeader {
+    gap: 10px;
+  }
 }

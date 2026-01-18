@@ -174,3 +174,78 @@
   color: #484848;
   width: 85%;
 }
+
+/* HERO responsive */
+@media (max-width: 1024px) {
+  .heroContainer {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textBox, .heroImgBox {
+    width: 100%;
+  }
+
+  .heroTitle {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 38px;
+    line-height: 42px;
+  }
+
+  .heroDesc {
+    font-size: 16px;
+  }
+
+  .heroBtn {
+    width: 150px;
+    height: 48px;
+  }
+
+  .vectorTL, .vectorTR, .vectorBL, .vectorBR {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* FEATURE responsive */
+@media (max-width: 1024px) {
+  .featureSection {
+    width: 90%;
+  }
+  .featureCards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .featureTitle {
+    font-size: 36px;
+  }
+
+  .featureCards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .cardTitle {
+    font-size: 24px;
+  }
+
+  .cardDesc {
+    font-size: 14px;
+  }
+}
