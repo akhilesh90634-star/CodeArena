@@ -8,7 +8,7 @@
 }
 
 .bgLayer {
-  width: 1530px;
+  width: 100%;
   height: 800px;
   background: url("../../../../public/TestimonialsBg.png") no-repeat center/cover;
   border-radius: 0;
