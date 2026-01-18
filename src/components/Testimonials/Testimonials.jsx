@@ -1,0 +1,74 @@
+import React from "react";
+import styles from "../styles/HomeStyle/Testimonial.module.css";
+
+function Testimonials() {
+  const testimonials = [
+    {
+      img: "/Person.png",
+      name: "Nutan Sai",
+      role: "Student",
+      stars: "/Stars.png",
+      text:
+        "Thanks to CodeArena, I went from barely understanding loops to solving advanced algorithm challenges. I can’t recommend it enough to fellow students!",
+      y: -60, // LEFT highest
+    },
+    {
+      img: "/Person.png",
+      name: "Nutan Sai",
+      role: "Student",
+      stars: "/Stars.png",
+      text:
+        "Thanks to CodeArena, I went from barely understanding loops to solving advanced algorithm challenges. I can’t recommend it enough to fellow students!",
+      y: 20, // CENTER lowest
+    },
+    {
+      img: "/Person.png",
+      name: "Nutan Sai",
+      role: "Student",
+      stars: "/Stars.png",
+      text:
+        "Thanks to CodeArena, I went from barely understanding loops to solving advanced algorithm challenges. I can’t recommend it enough to fellow students!",
+      y: 100, // RIGHT slightly below left, above center
+    },
+  ];
+
+  return (
+    <div className={styles.wrapper}>
+      <img src="/Fullvector.png" alt="vector" className={styles.vectorTL} />
+      <img src="/Fullvector.png" alt="vector" className={styles.vectorBR} />
+
+      <div className={styles.bgLayer}>
+        <h2 className={styles.title}>
+          What Our Students <br /> Say
+        </h2>
+
+        <div className={styles.cardContainer}>
+          {testimonials.map((t, i) => (
+            <div
+              key={i}
+              className={styles.card}
+              style={{ transform: `translateY(${t.y}px)` }}
+            >
+              <div className={styles.cardHeader}>
+                <img src={t.img} className={styles.personImg} alt="person" />
+
+                <div className={styles.info}>
+                  <p className={styles.name}>{t.name}</p>
+                  <p className={styles.role}>{t.role}</p>
+                </div>
+
+                <img src={t.stars} className={styles.stars} alt="stars" />
+              </div>
+
+              <p className={styles.desc}>{t.text}</p>
+
+              <img src="/Quote.png" alt="quote" className={styles.quote} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Testimonials;

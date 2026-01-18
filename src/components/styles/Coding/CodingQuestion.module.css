@@ -19,13 +19,8 @@
   gap: 10px;
 }
 
-.red {
-  color: #E41F3A;
-}
-
-.blue {
-  color: #363F8F;
-}
+.red { color: #E41F3A; }
+.blue { color: #363F8F; }
 
 /* ================= DESCRIPTION BOX ================= */
 .descBox {
@@ -41,9 +36,7 @@
   overflow-x: hidden;
 }
 
-.descBox::-webkit-scrollbar {
-  display: none;
-}
+.descBox::-webkit-scrollbar { display: none; }
 
 .title {
   font-size: 18px;
@@ -79,7 +72,6 @@
   padding-left: 8px;
 }
 
-/* MAIN EDITOR FRAME */
 .editorBox {
   width: 1248px;
   height: 662px;
@@ -89,7 +81,7 @@
   overflow: hidden;
 }
 
-/* LEFT EDITOR PANEL */
+/* LEFT EDITOR */
 .codeArea {
   width: 860px;
   height: 100%;
@@ -101,9 +93,7 @@
   overflow-y: auto;
 }
 
-.codeArea::-webkit-scrollbar {
-  display: none;
-}
+.codeArea::-webkit-scrollbar { display: none; }
 
 /* RIGHT CONSOLE */
 .console {
@@ -127,15 +117,9 @@
   gap: 10px;
 }
 
-.consoleTabActive {
-  font-weight: 600;
-}
+.consoleTabActive { font-weight: 600; }
+.consoleTab { opacity: 0.7; }
 
-.consoleTab {
-  opacity: 0.7;
-}
-
-/* INPUT BOX */
 .consoleInput {
   width: 100%;
   height: 100%;
@@ -147,9 +131,7 @@
   overflow-y: auto;
 }
 
-.consoleInput::-webkit-scrollbar {
-  display: none;
-}
+.consoleInput::-webkit-scrollbar { display: none; }
 
 /* ================= BUTTONS ================= */
 .btnRow {
@@ -158,34 +140,91 @@
   justify-content: center;
 }
 
-.runBtn {
-  width: 108px;
-  height: 62px;
-  border-radius: 15px;
-  padding: 20px 35px;
-  background: #E41F3A;
-  color: white;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-}
-
-.runBtn:hover {
-  background: #363F8F;
-}
-
+.runBtn,
 .submitBtn {
   width: 108px;
   height: 62px;
   border-radius: 15px;
   padding: 20px 35px;
-  background: #363F8F;
-  color: white;
   font-weight: 600;
+  color: white;
   border: none;
   cursor: pointer;
 }
 
+.runBtn {
+  background: #E41F3A;
+}
+.runBtn:hover {
+  background: #363F8F;
+}
+
+.submitBtn {
+  background: #363F8F;
+}
 .submitBtn:hover {
   background: #E41F3A;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet - ≤1024px */
+@media (max-width: 1024px) {
+  .descBox,
+  .editorWrapper {
+    width: 90vw;
+  }
+
+  .editorBox {
+    width: 100%;
+  }
+}
+
+/* Mobile - ≤768px */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .descBox {
+    width: 92vw;
+    height: auto;
+    max-height: 350px;
+  }
+
+  .editorWrapper {
+    width: 92vw;
+  }
+
+  .editorBox {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .codeArea,
+  .console {
+    width: 100%;
+    height: 300px;
+  }
+
+  .btnRow {
+    justify-content: flex-start;
+  }
+}
+
+/* Small Mobile - ≤480px */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .runBtn,
+  .submitBtn {
+    width: 90px;
+    height: 48px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
 }

@@ -1,0 +1,176 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Poppins, sans-serif;
+}
+
+/* ================= HERO BLOCK ================= */
+.heroBlock {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 120px;
+}
+
+.heroContainer {
+  width: 1248px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* TEXT */
+.textBox {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroTitle {
+  font-family: "ADLaM Display", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 60px;
+  color: #363F8F;
+}
+
+.red {
+  color: #E41F3A;
+}
+
+.blue {
+  color: #363F8F;
+}
+
+.heroDesc {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  max-width: 470px;
+  color: #363F8F;
+}
+
+.heroBtn {
+  width: 160px;
+  height: 55px;
+  border-radius: 12px;
+  background: #363F8F;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.heroBtn:hover {
+  background: #E41F3A;
+}
+
+/* HERO IMAGE */
+.heroImgBox {
+  width: 50%;
+  position: relative;
+}
+
+.heroBG {
+  width: 100%;
+}
+
+.heroModel {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 72%;
+  transform: translateX(-50%);
+}
+
+/* vectors inside hero */
+.vectorTL, .vectorTR, .vectorBL, .vectorBR {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+}
+
+.vectorTL {
+  top: 120px;
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.vectorTR {
+  top: 120px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.vectorBL {
+  bottom: 60px;
+  left: 80px;
+}
+
+.vectorBR {
+  bottom: -40px;
+  right: 80px;
+}
+
+/* ================= FEATURES ================= */
+.featureSection {
+  width: 1248px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.featureTitle {
+  font-family: "ADLaM Display", sans-serif;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.featureCards {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* CARD */
+.card {
+  width: 390px;
+  padding: 40px 20px;
+  border-radius: 22px;
+  border: 2px solid #E41F3A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.card:hover {
+  border-color: #363F8F;
+}
+
+.cardIcon {
+  width: 68px;
+  height: 68px;
+  border-radius: 15px;
+}
+
+.cardTitle {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.cardDesc {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #484848;
+  width: 85%;
+}
