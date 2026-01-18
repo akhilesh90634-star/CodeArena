@@ -36,17 +36,17 @@
 
 /* OUTER BOX (container 1) */
 .outerBox {
-  width: 1248px;
-  height: 2000px;
-  padding-left: 24px;
-  padding-right: 24px;
-  gap: 50px;
-  border-top-right-radius: 22.39px;
-  border-bottom-right-radius: 22.39px;
-  border-bottom-left-radius: 22.39px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 1248px;
+    height: 2000px;
+    padding-left: 24px;
+    padding-right: 107px;
+    gap: 50px;
+    border-top-right-radius: 22.39px;
+    border-bottom-right-radius: 22.39px;
+    border-bottom-left-radius: 22.39px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* INNER BOX (container 2) */
@@ -61,18 +61,20 @@
 /* MCQ CARD */
 .mcqCard {
   width: 1196.513px;
-  height: 338.755px;
-  padding: 50.37px 41.41px;
-  gap: 11.19px;
-  background: #F4F6FC;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
+    height: 338.755px;
+    padding: 50.37px 41.41px;
+    gap: 11.19px;
+    background: #F4F6FC;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
 }
 
 /* QUESTION TEXT */
 .question {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 22px;
   margin-bottom: 10px;
 }
@@ -88,13 +90,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 /* SUBMIT BUTTON */
 .submitBtn {
   width: 201px;
-  height: 62px;
   padding: 30px 20px;
   border-radius: 15px;
   background: #363F8F;

@@ -1,0 +1,85 @@
+.wrapper {
+  width: 100%;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+  overflow-x: hidden;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.red {
+  color: #E41F3A;
+}
+
+.blue {
+  color: #363F8F;
+}
+
+.filters {
+  width: 1248px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tableWrapper {
+  width: 1248px;
+  border-radius: 10px;
+  border: 1px solid #7C7C7C;
+  overflow: hidden;
+}
+
+.tableContainer {
+  max-height: 600px;
+}
+
+/* Solve image button */
+.solveImg {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.2s ease;
+  user-select: none;
+}
+
+.solveImg:hover {
+  transform: scale(1.05);
+}
+
+/* Pagination */
+.MuiTablePagination-toolbar {
+  font-size: 16px !important;
+}
+
+@media (max-width: 1280px) {
+  .filters,
+  .tableWrapper {
+    width: 95%;
+  }
+}
+
+@media (max-width: 900px) {
+  .filters {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .solveImg {
+    width: 90px;
+  }
+}

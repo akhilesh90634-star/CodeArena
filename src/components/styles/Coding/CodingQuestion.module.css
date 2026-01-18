@@ -1,0 +1,191 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 0;
+  align-items: center;
+  font-family: Poppins, sans-serif;
+}
+
+/* ================= HEADINGS ================= */
+.heading {
+  font-family: "ADLaM Display", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.red {
+  color: #E41F3A;
+}
+
+.blue {
+  color: #363F8F;
+}
+
+/* ================= DESCRIPTION BOX ================= */
+.descBox {
+  width: 1248px;
+  height: 464px;
+  background: #F4F6FC;
+  border-radius: 12px;
+  padding: 45px 37px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.descBox::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.subTitle {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.bold {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ================= TERMINAL AREA ================= */
+.editorWrapper {
+  width: 1248px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editorTab {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 8px;
+}
+
+/* MAIN EDITOR FRAME */
+.editorBox {
+  width: 1248px;
+  height: 662px;
+  display: flex;
+  border-radius: 12px;
+  border: 1px solid #E2E2E2;
+  overflow: hidden;
+}
+
+/* LEFT EDITOR PANEL */
+.codeArea {
+  width: 860px;
+  height: 100%;
+  background: #1E1E1E;
+  color: white;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+.codeArea::-webkit-scrollbar {
+  display: none;
+}
+
+/* RIGHT CONSOLE */
+.console {
+  width: 388px;
+  height: 100%;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  border-left: 1px solid #d6d6d6;
+}
+
+.consoleHeader {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.consoleTabs {
+  display: flex;
+  gap: 10px;
+}
+
+.consoleTabActive {
+  font-weight: 600;
+}
+
+.consoleTab {
+  opacity: 0.7;
+}
+
+/* INPUT BOX */
+.consoleInput {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #E2E2E2;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  resize: none;
+  overflow-y: auto;
+}
+
+.consoleInput::-webkit-scrollbar {
+  display: none;
+}
+
+/* ================= BUTTONS ================= */
+.btnRow {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.runBtn {
+  width: 108px;
+  height: 62px;
+  border-radius: 15px;
+  padding: 20px 35px;
+  background: #E41F3A;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.runBtn:hover {
+  background: #363F8F;
+}
+
+.submitBtn {
+  width: 108px;
+  height: 62px;
+  border-radius: 15px;
+  padding: 20px 35px;
+  background: #363F8F;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: #E41F3A;
+}
