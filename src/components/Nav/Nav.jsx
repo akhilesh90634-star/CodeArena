@@ -1,21 +1,28 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../styles/NavbarStyle/Nav.module.css";
 
 function Nav() {
   const [active, setActive] = useState(0);
   const [showMobile, setShowMobile] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const itemRefs = useRef([]);
   const indicatorRef = useRef(null);
 
   const menuItems = [
     { label: "Home", path: "/" },
-    { label: "About Us", path: "/about" },   // page can be added later
+    { label: "About Us", path: "/about" },
     { label: "Coding", path: "/coding" },
     { label: "MCQ’S", path: "/mcqs" }
   ];
+
+  // hide signup/login on these pages
+const pathname = location.pathname.toLowerCase();
+const hideAuthButtons =
+  pathname.includes("coding") || pathname.includes("mcq");
+
 
   useEffect(() => {
     if (itemRefs.current[active] && indicatorRef.current) {
@@ -50,7 +57,7 @@ function Nav() {
         </div>
       </div>
 
-      {/* CENTER DESKTOP MENU */}
+      {/* CENTER MENU */}
       <div className={styles.menu}>
         {menuItems.map((item, index) => (
           <span
@@ -67,15 +74,17 @@ function Nav() {
         <div ref={indicatorRef} className={styles.indicator}></div>
       </div>
 
-      {/* RIGHT BUTTONS */}
-      <div className={styles.actions}>
-        <button className={styles.signup} onClick={() => navigate("/signup")}>
-          Signup
-        </button>
-        <button className={styles.login} onClick={() => navigate("/login")}>
-          Login
-        </button>
-      </div>
+      {/* RIGHT BUTTONS (HIDDEN CONDITIONALLY) */}
+      {!hideAuthButtons && (
+        <div className={styles.actions}>
+          <button className={styles.signup} onClick={() => navigate("/signup")}>
+            Signup
+          </button>
+          <button className={styles.login} onClick={() => navigate("/login")}>
+            Login
+          </button>
+        </div>
+      )}
 
       {/* MOBILE MENU */}
       {showMobile && (
@@ -93,16 +102,20 @@ function Nav() {
             </span>
           ))}
 
-          <div className={styles.mobileActions}>
-            <button className={styles.signup} onClick={() => navigate("/signup")}>
-              Signup
-            </button>
-            <button className={styles.login} onClick={() => navigate("/login")}>
-              Login
-            </button>
-          </div>
+          {/* MOBILE AUTH BUTTONS (HIDDEN CONDITIONALLY) */}
+          {!hideAuthButtons && (
+            <div className={styles.mobileActions}>
+              <button className={styles.signup} onClick={() => navigate("/signup")}>
+                Signup
+              </button>
+              <button className={styles.login} onClick={() => navigate("/login")}>
+                Login
+              </button>
+            </div>
+          )}
         </div>
       )}
+
     </nav>
   );
 }

@@ -7,76 +7,66 @@
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  box-sizing: border-box;
 }
 
-/* TITLE SECTION */
+/* TITLE */
 .mcqTitle {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
-  height: 62px;
-  padding: 10px;
   font-family: 'ADLaM Display', cursive;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .mTitle {
   color: #E41F3A;
   font-size: 60px;
   font-weight: 400;
-  line-height: 60px;
 }
 
 .qTitle {
   color: #363F8F;
   font-size: 60px;
   font-weight: 400;
-  line-height: 60px;
 }
 
-/* OUTER BOX (container 1) */
+/* OUTER BOX */
 .outerBox {
-    width: 1248px;
-    height: 2000px;
-    padding-left: 24px;
-    padding-right: 107px;
-    gap: 50px;
-    border-top-right-radius: 22.39px;
-    border-bottom-right-radius: 22.39px;
-    border-bottom-left-radius: 22.39px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* INNER BOX (container 2) */
-.innerBox {
-  width: 1196.513px;
-  height: 1828.089px;
+  width: 1248px;
+  min-height: 1200px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 33.58px;
+  gap: 40px;
+  border-radius: 22px;
+  box-sizing: border-box;
+}
+
+/* INNER BOX */
+.innerBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
 }
 
 /* MCQ CARD */
 .mcqCard {
-  width: 1196.513px;
-    height: 338.755px;
-    padding: 50.37px 41.41px;
-    gap: 11.19px;
-    background: #F4F6FC;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
+  width: 100%;
+  padding: 45px 38px;
+  background: #F4F6FC;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
 }
 
-/* QUESTION TEXT */
+/* QUESTION */
 .question {
   font-size: 20px;
   line-height: 22px;
-  margin-bottom: 10px;
 }
 
 /* OPTIONS */
@@ -90,13 +80,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
-/* SUBMIT BUTTON */
+/* SUBMIT BTN */
 .submitBtn {
   width: 201px;
-  padding: 30px 20px;
+  padding: 20px;
   border-radius: 15px;
   background: #363F8F;
   color: white;
@@ -104,4 +94,80 @@
   font-weight: 600;
   border: none;
   cursor: pointer;
+  align-self: center;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* 1024px — Tablet */
+@media (max-width: 1024px) {
+  .outerBox {
+    width: 90vw;
+    padding: 20px;
+  }
+
+  .mTitle, .qTitle {
+    font-size: 48px;
+  }
+
+  .optionsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 768px — Mobile */
+@media (max-width: 768px) {
+  .outerBox {
+    width: 95vw;
+  }
+
+  .mcqCard {
+    padding: 32px 26px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .optionsGrid {
+    grid-template-columns: 1fr; /* stack options vertically */
+  }
+
+  .option {
+    font-size: 18px;
+  }
+
+  .mTitle, .qTitle {
+    font-size: 40px;
+  }
+
+  .submitBtn {
+    width: 160px;
+    font-size: 16px;
+  }
+}
+
+/* 480px — Small Phones */
+@media (max-width: 480px) {
+  .mTitle, .qTitle {
+    font-size: 32px;
+  }
+
+  .question {
+    font-size: 16px;
+  }
+
+  .option {
+    font-size: 16px;
+  }
+
+  .submitBtn {
+    width: 150px;
+    height: 45px;
+    font-size: 15px;
+  }
+
+  .outerBox {
+    gap: 24px;
+  }
 }
