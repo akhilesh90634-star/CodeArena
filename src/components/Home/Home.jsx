@@ -4,6 +4,8 @@ import styles from "../styles/HomeStyle/Home.module.css";
 import Testimonials from "../Testimonials/Testimonials";
 import BuiltForEveryone from "../BuiltForEveryone/BuiltForEveryone";
 import HowItWorks from "../HowItWorks/HowItWorks";
+import Subscribe from "../Subscribe/Subscribe";
+import Footer from "../Footer/Footer";
 
 function Home() {
   const navigate = useNavigate();
@@ -105,6 +107,8 @@ function Home() {
       <Testimonials/>
       <BuiltForEveryone/>
       <HowItWorks/>
+      <Subscribe/>
+      <Footer/>
 
     </div>
   );
