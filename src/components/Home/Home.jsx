@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../styles/HomeStyle/Home.module.css";
 import Testimonials from "../Testimonials/Testimonials";
+import BuiltForEveryone from "../BuiltForEveryone/BuiltForEveryone";
+import HowItWorks from "../HowItWorks/HowItWorks";
 
 function Home() {
   const navigate = useNavigate();
@@ -101,6 +103,8 @@ function Home() {
       </div>
 
       <Testimonials/>
+      <BuiltForEveryone/>
+      <HowItWorks/>
 
     </div>
   );
