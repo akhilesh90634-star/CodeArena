@@ -1,8 +1,8 @@
 .wrapper {
-  width: 1248px;
+  width: 100%;
+  max-width: 1248px;
   background: #0D1333;
-  margin: auto;
-  margin-top: 120px;
+  margin: 120px auto 0;
   display: flex;
   justify-content: center;
   position: relative;
@@ -12,14 +12,15 @@
 .vector {
   position: absolute;
   top: 0;
-  left: -150px;
-  transform: translate(-40%, -40%);
+  left: -200px;
+  transform: translateY(-40%);
   width: 120px;
   height: 120px;
 }
 
 .container {
-  width: 1248px;
+  width: 100%;
+  max-width: 1248px;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -34,7 +35,7 @@
 
 .logo {
   width: 200px;
-  height: 105px;
+  height: auto;
   object-fit: contain;
 }
 
@@ -45,10 +46,6 @@
   font-family: Poppins;
   font-size: 16px;
   font-weight: 500;
-}
-
-.navText span {
-  pointer-events: none; /* Not clickable */
 }
 
 .socials {
@@ -84,41 +81,91 @@
   opacity: 0.9;
 }
 
-/* ================= RESPONSIVE ================= */
-
+/* ================= TABLET ================= */
 @media (max-width: 992px) {
   .topRow {
     flex-direction: column;
-    gap: 16px;
+    text-align: center;
+    gap: 14px;
   }
 
   .navText {
-    gap: 24px;
-  }
-
-  .bottomRow {
-    flex-direction: column;
-    gap: 12px;
+    gap: 28px;
   }
 
   .socials {
     height: 28px;
   }
+
+  .bottomRow {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .vector {
+    left: 0;
+    width: 90px;
+    height: 90px;
+    transform: translate(-10%, -30%);
+    z-index: -1;
+  }
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 600px) {
+  .wrapper {
+    padding: 36px 0;
+    margin-top: 80px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
   .navText {
     flex-wrap: wrap;
-    gap: 16px;
+    justify-content: center;
+    gap: 18px;
     font-size: 14px;
   }
 
   .bottomLinks {
     flex-wrap: wrap;
-    gap: 16px;
+    justify-content: center;
+    gap: 18px;
+    font-size: 13px;
   }
 
-  .logo {
-    width: 160px;
+  .copy {
+    font-size: 13px;
+  }
+
+  .vector {
+    width: 70px;
+    height: 70px;
+    left: -20px;
+    transform: translateY(-20%);
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 420px) {
+  .navText {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  .bottomLinks {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  .wrapper {
+    padding: 28px 0;
+  }
+
+  .copy {
+    font-size: 12px;
   }
 }

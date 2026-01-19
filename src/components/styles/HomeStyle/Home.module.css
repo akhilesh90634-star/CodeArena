@@ -140,7 +140,7 @@
 /* CARD */
 .card {
   width: 390px;
-  padding: 40px 20px;
+  padding: 40px 0px;
   border-radius: 22px;
   border: 2px solid #E41F3A;
   display: flex;

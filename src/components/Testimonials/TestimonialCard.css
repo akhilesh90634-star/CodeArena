@@ -1,0 +1,113 @@
+.tcard-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.tcard {
+  width: 390px;
+  background: #ffffff;
+  box-shadow: 0px 6px 22px rgba(0,0,0,0.18);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* --- TOP RED HEADER --- */
+.tcard-top {
+  background-color: #E41F3A;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  width: 82%; 
+  /* min-height: 75px; */
+  height: 59px;
+  position: relative;
+  top: -20px;
+  z-index: 3;
+  justify-content: space-between;
+}
+
+/* PROFILE IMAGE */
+.tcard-img {
+  width: 91px;
+  height: 91px;
+  object-fit: cover;
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  border-radius: 6px;
+  z-index: 4;
+}
+
+/* NAME + ROLE */
+.tcard-info {
+  margin-left: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.tcard-name {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.tcard-role {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* STARS */
+.tcard-stars-row {
+  display: flex;
+  align-items: center;
+}
+
+.tcard-stars {
+  width: 150px;
+}
+
+/* BODY */
+.tcard-body {
+  padding: 0px 36px 50px;
+  position: relative;
+}
+
+.tcard-review {
+  font-size: 14px;
+  line-height: 21px;
+  color: #222;
+  max-width: 90%;
+}
+
+/* QUOTE */
+.tcard-quote {
+  width: 70px;
+  position: absolute;
+  bottom: -32px;
+  left: 30px;
+  opacity: 0.92;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .tcard {
+    width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tcard {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tcard {
+    width: 100%;
+  }
+}
